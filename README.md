@@ -5,8 +5,6 @@
 [![Groq](https://img.shields.io/badge/LLM-Groq%20Llama%203.1-orange)]()
 [![License](https://img.shields.io/badge/License-MIT-green)]()
 
----
-
 ## Overview
 
 This project implements an automated scoring system for the **Elicited Imitation Task (EIT)** — a widely used research tool for measuring global language proficiency in second language learners.
@@ -29,7 +27,6 @@ Stimulus + Transcription
   Rule×0.4 + LLM×0.4 + Sim×0.2
 ```
 
----
 
 ## 3-Layer Scoring Pipeline
 
@@ -55,7 +52,7 @@ Nuanced edge case handler:
 - Handles disfluent speech, partial sentences, and fillers
 - Provides human-readable reasoning for every score
 
----
+
 
 ## Scoring Rubric (0-4 scale)
 
@@ -67,7 +64,7 @@ Nuanced edge case handler:
 | 3 | Most words correct, meaning mostly preserved |
 | 4 | All or nearly all words correct, meaning fully preserved |
 
----
+
 
 ## Final Score Calculation
 ```
@@ -79,7 +76,6 @@ Final Score = (Rule Score × 0.4) + (LLM Score × 0.4) + (Similarity Score × 0.
 - Score is clamped to 0-4 range
 - **Divergence Flag** — raised when rule-based and LLM scores differ by more than 1 point, flagging the sentence for human review
 
----
 
 ## Project Structure
 ```
@@ -96,7 +92,6 @@ gsoc-2026-autoeit/
 └── README.md
 ```
 
----
 
 ## Setup & Run
 
@@ -130,7 +125,6 @@ GROQ_API_KEY=your_groq_api_key
 python main.py
 ```
 
----
 
 ## Tech Stack
 
@@ -143,7 +137,6 @@ python main.py
 | Data Processing | pandas |
 | Similarity | scikit-learn cosine similarity |
 
----
 
 ## Evaluation
 
@@ -158,13 +151,6 @@ python main.py
 - Rule-based layer may underperform on heavy paraphrasing or synonyms
 - Fuzzy matching threshold (80%) is heuristic
 
-### Future Improvements:
-- Fine-tune on EIT-specific annotated data with human rater scores
-- Add phonetic similarity for near-homophone detection in Spanish
-- Learn optimal layer weights from annotated data
-- Build a web interface for researchers to upload transcriptions
-
----
 
 ## Author
 
