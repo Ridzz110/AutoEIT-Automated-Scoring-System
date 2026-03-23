@@ -11,7 +11,6 @@ This project implements an automated scoring system for the **Elicited Imitation
 
 The EIT requires learners to listen to and repeat sentences. Scoring is currently done manually by trained human raters — a slow, labor-intensive process. This system automates that scoring using a **3-layer hybrid pipeline** that is transparent, consistent, and reproducible.
 
----
 
 ## Architecture
 ```
